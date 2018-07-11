@@ -76,7 +76,7 @@ func main() {
 
 
 
-			
+
 			discoun_q := (1.0 + increase_rate_of_free_cash_flow) / (1.0 + discount_rate)
 
 			// 1. 算前面i年的现金流总量，并且贴现到起始年

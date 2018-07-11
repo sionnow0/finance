@@ -8,6 +8,7 @@ func main() {
 	b := 1061 - 964 + 266
 	fmt.Printf("%d\n", b)
 
+
 	a = 6000.0/4705 * 386
 	fmt.Println(a)
 }

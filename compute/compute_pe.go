@@ -12,6 +12,7 @@ type PeInfo struct {
 
 func main() {
 
+
 	//假定初始price为1CNY
 	var dw_init_pe float64 = 37
 	var growth_rate float64 = 35//百分比
