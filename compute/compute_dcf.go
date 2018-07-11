@@ -49,7 +49,7 @@ func main() {
 	fmt.Println("init_free_cash_flow:", init_free_cash_flow)
 	fmt.Printf("start_year:%d\n", year)
 	fmt.Printf("i:%d\n", i)
-	//fmt.Println("=======================")
+
 
 	/*
 		(0) 2017: {free_cash_flow: 140.00} {after_discount: 140.00}
@@ -57,12 +57,6 @@ func main() {
 		(2) 2019: {free_cash_flow: 201.60} {after_discount: 166.61}
 		(3) 2020: {free_cash_flow: 241.92} {after_discount: 181.76}
 		(4) 2021: {free_cash_flow: 290.30} {after_discount: 198.28}
-	*/
-	// q is discount_q
-	/*
-	increase_rate_of_free_cash_flow_arr := []float64{0.100001, 0.15, 0.2, 0.25}
-	discount_rate_arr := []float64{0.1, 0.12, 0.14}
-	forever_increase_rate_of_free_cash_flow := 0.02
 	*/
 
 
@@ -79,36 +73,34 @@ func main() {
 				fmt.Println("warning, divide zero, so stop!!!")
 				return
 			}
-			//total = init_free_cash_flow * (1.0 - power(q, years_num)) / (1.0 - q)
-			//no_discount_q := (1.0 + increase_rate_of_free_cash_flow)
+
 			discoun_q := (1.0 + increase_rate_of_free_cash_flow) / (1.0 + discount_rate)
-			//total_2021_no_discount := init_free_cash_flow * (1.0 - power(no_discount_q, i)) / (1.0 - no_discount_q)
+
+			// 1. 算前面i年的现金流总量，并且贴现到起始年
 			total_2021_discount := init_free_cash_flow * (1.0 - power(discoun_q, i)) / (1.0 - discoun_q)
 
-			// 算第4年，名义现金流
-
+			// 2. 算第i年，名义现金流, 以及当年的现金流贴现到起始年
 			year_2021_free_cash_flow := init_free_cash_flow * power((1.0+increase_rate_of_free_cash_flow), i)
 			after_discount := year_2021_free_cash_flow / (power((1.0 + discount_rate), i))
 			fmt.Printf("********* R:%.0f%% D:%.0f%% A:%.0f%% **********\n", increase_rate_of_free_cash_flow*100,
 				discount_rate*100, forever_increase_rate_of_free_cash_flow*100)
 			fmt.Printf("%d: {this_year_free_cash_flow: %.2f} {this_year_after_discount: %.2f}\n", i+year, year_2021_free_cash_flow, after_discount)
 
+
+			// 3. 算永续现金流
 			forever_q := (1.0 + forever_increase_rate_of_free_cash_flow) / (1.0 + discount_rate)
 			//这里往下多算了一年的永续增长率，然后再折现到今日
 			forever_fcf := year_2021_free_cash_flow * (1+forever_increase_rate_of_free_cash_flow) / (1 - forever_q)
-			//forever_fcf_2 := year_2021_free_cash_flow * (1+discount_rate) / (discount_rate - forever_increase_rate_of_free_cash_flow) - year_2021_free_cash_flow
-			//total_all := total_2021_no_discount + forever_fcf
 			total_all_discount_to_today := total_2021_discount + (forever_fcf / power((1+discount_rate), i+1))
 			fmt.Printf("%d: total_fcf_before_and_include_year_%d_discount_to_%d: %.2f \n", i+year, i+year, year, total_2021_discount)
 			fmt.Printf("%d: forever_fcf_discount_to_year_%d: %.2f , after_discount_to_%d: %.2f\n", i+year+1, i+year+1, forever_fcf, year, (forever_fcf / power((1+discount_rate), i+1)))
 			fmt.Printf("%d: forever_fcf_discount_to_year_%d: %.2f , after_discount_to_%d: %.2f\n", i+year, i+year, forever_fcf/(1+discount_rate), year, (forever_fcf / power((1+discount_rate), i+1)))
-			//fmt.Printf("%d: total: %.2f\n", i+year, total_all)
 			fmt.Printf("%d: CNY total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today)
 			fmt.Printf("%d: USD total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/6.5)
 			fmt.Printf("%d: HKD total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/0.83)
 			fmt.Printf("%d: HKD per stock total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/0.83/95.05)
 			fmt.Print("\n")
-			//fmt.Printf("--------- R:%.2f D:%.2f A:%.2f ------------\n")
+
 		}
 
 	}
