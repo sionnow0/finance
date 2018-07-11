@@ -42,8 +42,8 @@ func main() {
 	year := 2017
 	init_free_cash_flow = 724
 	i := 3 // 2021年的名义现金流
-	increase_rate_of_free_cash_flow_arr := []float64{0.5,0.45,0.4, 0.35, 0.3, 0.25, 0.2, 0.15}
-	discount_rate_arr := []float64{0.1, 0.12, 0.14}
+	increase_rate_of_free_cash_flow_arr := []float64{0.35, 0.3, 0.25, 0.2}
+	discount_rate_arr := []float64{0.1, 0.12, 0.13}
 	forever_increase_rate_of_free_cash_flow := 0.05
 
 	fmt.Println("init_free_cash_flow:", init_free_cash_flow)
@@ -64,6 +64,7 @@ func main() {
 	discount_rate_arr := []float64{0.1, 0.12, 0.14}
 	forever_increase_rate_of_free_cash_flow := 0.02
 	*/
+
 
 	for ii := 0; ii < len(increase_rate_of_free_cash_flow_arr); ii++ {
 		increase_rate_of_free_cash_flow = increase_rate_of_free_cash_flow_arr[ii]
@@ -105,6 +106,7 @@ func main() {
 			fmt.Printf("%d: CNY total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today)
 			fmt.Printf("%d: USD total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/6.5)
 			fmt.Printf("%d: HKD total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/0.83)
+			fmt.Printf("%d: HKD per stock total_all_discount_to_%d: %.2f\n", year, year, total_all_discount_to_today/0.83/95.05)
 			fmt.Print("\n")
 			//fmt.Printf("--------- R:%.2f D:%.2f A:%.2f ------------\n")
 		}

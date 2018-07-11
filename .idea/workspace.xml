@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04580dc6-4d62-4162-bcaf-04dc57c9c6cd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/compute/双重复利求和.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compute/compute_dcf.go" beforeDir="false" afterPath="$PROJECT_DIR$/compute/compute_dcf.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,23 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="compute_dcf.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compute_dcf.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compute/compute_dcf.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="220">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="双重复利求和.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/compute/双重复利求和.go">
+      <file leaf-file-name="双重复利求和_利率本身复利.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compute/双重复利求和_利率本身复利.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding>
-                <element signature="e#13#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -52,6 +49,8 @@
       <list>
         <option value="$PROJECT_DIR$/dcf/calculation.go" />
         <option value="$PROJECT_DIR$/compute/双重复利求和.go" />
+        <option value="$PROJECT_DIR$/compute/双重复利求和_利率本身复利.go" />
+        <option value="$PROJECT_DIR$/compute/compute_dcf.go" />
       </list>
     </option>
   </component>
@@ -117,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build 双重复利求和_利率本身复利.go">
+  <component name="RunManager" selected="Go Build.go build compute_dcf.go">
     <configuration name="go build 双重复利求和_利率本身复利.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="finance" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -167,9 +166,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build compute_dcf.go" />
         <item itemvalue="Go Build.go build 双重复利求和_利率本身复利.go" />
         <item itemvalue="Go Build.go build 双重复利求和.go" />
-        <item itemvalue="Go Build.go build compute_dcf.go" />
         <item itemvalue="Go Build.go build dcf_the_n_year.go" />
         <item itemvalue="Go Build.go build test.go" />
       </list>
@@ -177,13 +176,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1032" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13973333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23772322" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24553572" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
@@ -226,13 +226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compute/compute_dcf.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compute/双重复利求和.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -240,6 +233,20 @@
           <folding>
             <element signature="e#13#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute/双重复利求和_利率本身复利.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute/compute_dcf.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
         </state>
       </provider>
     </entry>
