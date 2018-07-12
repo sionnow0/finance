@@ -22,7 +22,7 @@ func main() {
 	var years int
 	var init_interest_rate , rate_of_increase float64
 
-	
+
 	flag.IntVar(&years, "years", 10, "total years, e.g 10")
 	flag.Float64Var(&init_interest_rate, "rate", 0.04, "first interest rate, e.g 0.02")
 	flag.Float64Var(&rate_of_increase, "rate_increase", 0.1, "rate of increase, e.g 0.1")
