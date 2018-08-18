@@ -33,3 +33,12 @@ func Test_Power_v2(t *testing.T) {
 		t.Errorf("err:%v", math.Pow(16, 1.0/2))
 	}
 }
+
+func TestGetRatio(t *testing.T) {
+	// 1.3 * 1.3 * 1.3 = 2.197, 增长率30%
+	if utils.G_Accuracy.Equal(utils.GetRatio(1, 2.197, 3), 30) {
+		t.Logf("succ")
+	} else {
+		t.Errorf("err")
+	}
+}

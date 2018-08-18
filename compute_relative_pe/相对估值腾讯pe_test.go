@@ -3,6 +3,7 @@ package main_test
 import "testing"
 import (
 	"math"
+	"../utils"
 )
 
 var G_All_Stock_Num float64 = 95.05 // (20180818股票总数)
@@ -48,10 +49,9 @@ func Test_pe_v1(t *testing.T) {
 	}
 
 	year_num := 4.0
-	rl := math.Pow(620.0/G_My_Costing, 1.0/year_num)
-	rr := math.Pow(744.0/G_My_Costing, 1.0/year_num)
-	t.Logf("增长率范围为%.1f%% ~ %.1f%%", rl*100 - 100, rr*100 - 100)
-
+	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+		utils.GetRatio(G_My_Costing, 620, year_num),
+		utils.GetRatio(G_My_Costing, 744, year_num))
 }
 
 func Test_pe_v2(t *testing.T) {
@@ -80,6 +80,11 @@ func Test_pe_v2(t *testing.T) {
 	} else {
 		t.Errorf("2017 can buy price { %dpe: 372 HKD, but:%d }", round(pe_range_r), round(a_2021_30/G_All_Stock_Num/2))
 	}
+
+	year_num := 4.0
+	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+		utils.GetRatio(G_My_Costing, 496, year_num),
+		utils.GetRatio(G_My_Costing, 744, year_num))
 }
 
 func Test_pe_v3(t *testing.T) {
@@ -110,9 +115,9 @@ func Test_pe_v3(t *testing.T) {
 	}
 
 	year_num := 4.0
-	rl := math.Pow(450.0/G_My_Costing, 1.0/year_num)
-	rr := math.Pow(540.0/G_My_Costing, 1.0/year_num)
-	t.Logf("增长率范围为%.1f%% ~ %.1f%%", rl*100 - 100, rr*100 - 100)
+	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+		utils.GetRatio(G_My_Costing, 450, year_num),
+		utils.GetRatio(G_My_Costing, 540, year_num))
 }
 
 

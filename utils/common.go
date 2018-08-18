@@ -25,3 +25,9 @@ func Power(x float64, n int) float64 {
 	}
 	return ans
 }
+
+// 给出起始金额，终止金额，年数，求出这些年的增长率,
+// 增长率已经算好百分比，比如10%，就返回10
+func GetRatio(start_num, end_num, year_num float64) float64 {
+	return (math.Pow(end_num/start_num, 1.0/year_num) - 1.0) * 100
+}
