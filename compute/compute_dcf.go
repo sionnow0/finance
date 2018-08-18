@@ -41,9 +41,9 @@ func main() {
 	*/
 	year := 2017
 	init_free_cash_flow = 724
-	i := 3 // 2021年的名义现金流
-	increase_rate_of_free_cash_flow_arr := []float64{0.35, 0.3, 0.25, 0.2}
-	discount_rate_arr := []float64{0.1, 0.12, 0.13}
+	i := 4 // 2021年的名义现金流
+	increase_rate_of_free_cash_flow_arr := []float64{0.3}
+	discount_rate_arr := []float64{0.08, 0.12, 0.13}
 	forever_increase_rate_of_free_cash_flow := 0.05
 
 	fmt.Println("init_free_cash_flow:", init_free_cash_flow)
