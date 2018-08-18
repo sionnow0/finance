@@ -49,7 +49,7 @@ func Test_pe_v1(t *testing.T) {
 	}
 
 	year_num := 4.0
-	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+	t.Logf("公司30%%增长，收益增长率范围为%.1f%% ~ %.1f%%",
 		utils.GetRatio(G_My_Costing, 620, year_num),
 		utils.GetRatio(G_My_Costing, 744, year_num))
 }
@@ -82,7 +82,7 @@ func Test_pe_v2(t *testing.T) {
 	}
 
 	year_num := 4.0
-	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+	t.Logf("公司30%%增长，收益增长率范围为%.1f%% ~ %.1f%%",
 		utils.GetRatio(G_My_Costing, 496, year_num),
 		utils.GetRatio(G_My_Costing, 744, year_num))
 }
@@ -115,7 +115,7 @@ func Test_pe_v3(t *testing.T) {
 	}
 
 	year_num := 4.0
-	t.Logf("增长率范围为%.1f%% ~ %.1f%%",
+	t.Logf("公司20%%增长，收益增长率范围为%.1f%% ~ %.1f%%",
 		utils.GetRatio(G_My_Costing, 450, year_num),
 		utils.GetRatio(G_My_Costing, 540, year_num))
 }
