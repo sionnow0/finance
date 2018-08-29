@@ -42,4 +42,6 @@ func TestGetRatio(t *testing.T) {
 		t.Errorf("err")
 	}
 	t.Log(utils.GetRatio(1, 5, 10)) //u兄计算的那个表格，没有给增长率，所以我算了下，相当于17.5%
+	t.Log(utils.GetRatio(1, 3, 10)) //u兄计算的那个表格，没有给增长率，所以我算了下，相当于11.6%
+	t.Log(utils.GetRatio(1, 2, 10)) //u兄计算的那个表格，没有给增长率，所以我算了下，相当于7.17%
 }
